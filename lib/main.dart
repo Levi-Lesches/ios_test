@@ -28,7 +28,8 @@ class CounterState extends State<CounterPage> {
     body: Center (
       child: Text (
         "You pressed the button: \n"
-        "$counter times"
+        "$counter times",
+        textScaleFactor: 2
       )
     )
   );
