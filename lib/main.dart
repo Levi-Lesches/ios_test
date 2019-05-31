@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
-import "dart:async";
+// import "dart:async";
 
-import "cloud_firestore.dart" as Firestore;
+// import "cloud_firestore.dart" as Firestore;
 
 void main() {
   runApp (
@@ -22,19 +22,19 @@ class CounterState extends State<CounterPage> {
   @override 
   void initState() {
   	super.initState();
-		Firestore.getCount().then (
-			(int count) => setState(() => counter = count)
-		);
+		// Firestore.getCount().then (
+		// 	(int count) => setState(() => counter = count)
+		// );
 
 		// The FAB is faster than FB, and we do want to limit document writes
 		// so we update manually every once in a while instead of every button press
-		Timer.periodic(
-  		const Duration(minutes: 1),
-  		(_) async {
-  			if (counter != await Firestore.getCount()) 
-  				Firestore.setCount(counter);
-			}
-		);
+		// Timer.periodic(
+  // 		const Duration(minutes: 1),
+  // 		(_) async {
+  // 			if (counter != await Firestore.getCount()) 
+  // 				Firestore.setCount(counter);
+		// 	}
+		// );
   }
 
   @override
